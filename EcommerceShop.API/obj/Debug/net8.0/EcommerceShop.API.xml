@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EcommerceShop.API</name>
+    </assembly>
+    <members>
+        <member name="M:EcommerceShop.API.Controllers.AuthController.Post(EcommerceShop.API.Dto.AuthRequest)">
+            <summary>
+            Creates a token.
+            </summary>
+            <returns>Generated token</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.AuthController.Delete(EcommerceShop.API.Core.ITokenStorage)">
+            <summary>
+            Deletes a token.
+            </summary>
+            <returns>204 No content</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.BrandsController.Get(EcommerceShop.Application.UseCases.Dto.PagedSearch,EcommerceShop.Application.UseCases.Queries.Brand.IGetBrandQuery)">
+            <summary>
+            Retrieves a list of brands based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving brands.</param>
+            <returns>List of brands.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.BrandsController.Get(System.Int32,EcommerceShop.Application.UseCases.Queries.Brand.IFindBrandQuery)">
+            <summary>
+            Retrieves a brand by ID.
+            </summary>
+            <param name="id">Brand ID.</param>
+            <param name="query">Query for finding a brand.</param>
+            <returns>The brand.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.BrandsController.Post(EcommerceShop.Application.UseCases.Dto.Brand.CreateBrandDto,EcommerceShop.Application.UseCases.Commands.Brand.ICreateBrandCommand)">
+            <summary>
+            Creates a new brand.
+            </summary>
+            <param name="request">Brand data.</param>
+            <param name="command">Command for creating a brand.</param>
+            <returns>Status code 201 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.BrandsController.Delete(System.Int32,EcommerceShop.Application.UseCases.Commands.Brand.IDeleteBrandCommand)">
+            <summary>
+            Deletes a brand by ID.
+            </summary>
+            <param name="id">Brand ID.</param>
+            <param name="command">Command for deleting a brand.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CartsController.Get(EcommerceShop.Application.UseCases.Dto.PagedSearch,EcommerceShop.Application.UseCases.Queries.Cart.IGetCartQuery)">
+            <summary>
+            Retrieves a list of carts based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving carts.</param>
+            <returns>List of carts.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CartsController.Get(System.Int32,EcommerceShop.Application.UseCases.Queries.Cart.IFindCartQuery)">
+            <summary>
+            Retrieves a cart by ID.
+            </summary>
+            <param name="id">Cart ID.</param>
+            <param name="query">Query for finding a cart.</param>
+            <returns>The cart.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CartsController.Post(EcommerceShop.Application.UseCases.Dto.Cart.CreateCartDto,EcommerceShop.Application.UseCases.Commands.Cart.IAddCartItemCommand)">
+            <summary>
+            Creates a new cart item.
+            </summary>
+            <param name="request">Cart item data.</param>
+            <param name="command">Command for adding a cart item.</param>
+            <returns>Status code 201 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CartsController.RemoveCartItem(System.Int32,EcommerceShop.Application.UseCases.Commands.Cart.IRemoveCartItemCommand)">
+            <summary>
+            Remove item from cart.
+            </summary>
+            <param name="id">Cart Item ID.</param>
+            <param name="command">Command for removing cart item.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CartsController.ProcessOrder(System.Int32,EcommerceShop.Application.UseCases.Commands.Cart.IChangeCartStatusCommand)">
+            <summary>
+            Changes the status of a cart.
+            </summary>
+            <param name="id">Cart ID.</param>
+            <param name="command">Command for changing the cart status.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CartsController.Delete(System.Int32,EcommerceShop.Application.UseCases.Commands.Cart.IDeleteCartCommand)">
+            <summary>
+            Deletes a cart by ID.
+            </summary>
+            <param name="id">Cart ID.</param>
+            <param name="command">Command for deleting a cart.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CategoriesController.Get(EcommerceShop.Application.UseCases.Dto.PagedSearch,EcommerceShop.Application.UseCases.Queries.Category.IGetCategoryQuery)">
+            <summary>
+            Retrieves a list of categories based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving categories.</param>
+            <returns>List of categories.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CategoriesController.Get(System.Int32,EcommerceShop.Application.UseCases.Queries.Category.IFindCategoryQuery)">
+            <summary>
+            Retrieves a category by ID.
+            </summary>
+            <param name="id">Category ID.</param>
+            <param name="query">Query for finding a category.</param>
+            <returns>The category.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.CategoriesController.Post(EcommerceShop.Application.UseCases.Dto.Category.CreateCategoryDto,EcommerceShop.Application.UseCases.Commands.Category.ICreateCategoryCommand)">
+            <summary>
+            Creates a new category.
+            </summary>
+            <param name="dto">Category data.</param>
+            <param name="command">Command for creating a category.</param>
+            <returns>Status code 201 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.DiscountsController.Get(EcommerceShop.Application.UseCases.Dto.Discount.DiscountPagedSearch,EcommerceShop.Application.UseCases.Queries.Discount.IGetDiscountQuery)">
+            <summary>
+            Retrieves a list of discounts based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving discounts.</param>
+            <returns>List of discounts.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.DiscountsController.Post(EcommerceShop.Application.UseCases.Dto.Discount.ScheduleDiscountDto,EcommerceShop.Application.UseCases.Commands.Discount.IScheduledDiscountCommand)">
+            <summary>
+            Schedules a new discount.
+            </summary>
+            <param name="request">Discount data.</param>
+            <param name="command">Command for scheduling a discount.</param>
+            <returns>Status code 201 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.DiscountsController.Delete(System.Int32,EcommerceShop.Application.UseCases.Commands.Discount.IDeleteDiscountCommand)">
+            <summary>
+            Deletes a discount by ID.
+            </summary>
+            <param name="id">Discount ID.</param>
+            <param name="command">Command for deleting a discount.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.ProductsController.Get(EcommerceShop.Application.UseCases.Dto.Product.ProductPagedSearch,EcommerceShop.Application.UseCases.Queries.Product.IGetProductQuery)">
+            <summary>
+            Retrieves a list of products based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving products.</param>
+            <returns>List of products.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.ProductsController.Get(System.Int32,EcommerceShop.Application.UseCases.Queries.Product.IFindProductQuery)">
+            <summary>
+            Retrieves a product by ID.
+            </summary>
+            <param name="id">Product ID.</param>
+            <param name="query">Query for finding a product.</param>
+            <returns>The product.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.ProductsController.Post(EcommerceShop.API.Dto.UploadImageDto,EcommerceShop.Application.UseCases.Commands.Product.ICreateProductCommand)">
+            <summary>
+            Creates a new product.
+            </summary>
+            <param name="request">Product data.</param>
+            <param name="command">Command for creating a product.</param>
+            <returns>Status code 201 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.ProductsController.Put(System.Int32,EcommerceShop.Application.UseCases.Dto.Product.EditProductDto,EcommerceShop.Application.UseCases.Commands.Product.IEditProductCommand)">
+            <summary>
+            Updates an existing product.
+            </summary>
+            <param name="id">Product ID.</param>
+            <param name="request">Product data to update.</param>
+            <param name="command">Command for editing a product.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.ProductsController.Delete(System.Int32,EcommerceShop.Application.UseCases.Commands.Product.IDeleteProductCommand)">
+            <summary>
+            Deletes a product by ID.
+            </summary>
+            <param name="id">Product ID.</param>
+            <param name="command">Command for deleting a product.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.RegistrationController.Post(EcommerceShop.Application.UseCases.Dto.User.RegistrationUserDto,EcommerceShop.Application.UseCases.Commands.User.IRegistrationUserCommand)">
+            <summary>
+            Registers a new user.
+            </summary>
+            <param name="request">User registration data.</param>
+            <param name="command">Command for registering a user.</param>
+            <returns>Status code 201 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.ReportsController.GetOrders(EcommerceShop.Application.UseCases.Dto.Reports.OrderPagedSearch,EcommerceShop.Application.UseCases.Queries.Report.IGetOrdersReportQuery)">
+            <summary>
+            Retrieves orders report based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving orders report.</param>
+            <returns>Orders report.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.ReportsController.GetAuditLog(EcommerceShop.Application.UseCases.Dto.Reports.AuditLogPagedSearch,EcommerceShop.Application.UseCases.Queries.Report.IGetUseCaseLogQuery)">
+            <summary>
+            Retrieves audit logs report based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving audit logs report.</param>
+            <returns>Audit logs report.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.UsersController.Get(EcommerceShop.Application.UseCases.Dto.PagedSearch,EcommerceShop.Application.UseCases.Queries.User.IGetUsersQuery)">
+            <summary>
+            Retrieves a list of users based on search criteria.
+            </summary>
+            <param name="search">Search criteria.</param>
+            <param name="query">Query for retrieving users.</param>
+            <returns>List of users.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.UsersController.Get(System.Int32,EcommerceShop.Application.UseCases.Queries.User.IFindUserQuery)">
+            <summary>
+            Retrieves a user by ID.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="query">Query for finding a user.</param>
+            <returns>The user.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.UsersController.Put(System.Int32,EcommerceShop.Application.UseCases.Dto.User.EditUserDto,EcommerceShop.Application.UseCases.Commands.User.IEditUserCommand)">
+            <summary>
+            Updates an existing user.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="request">User data to update.</param>
+            <param name="command">Command for editing a user.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.UsersController.ModifyAccess(System.Int32,EcommerceShop.Application.UseCases.Dto.User.EditUserAccessDto,EcommerceShop.Application.UseCases.Commands.User.IEditUserAccessCommand)">
+            <summary>
+            Updates an access for user.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="command">Command for editing a access user.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+        <member name="M:EcommerceShop.API.Controllers.UsersController.Delete(System.Int32,EcommerceShop.Application.UseCases.Commands.User.IDeleteUserCommand)">
+            <summary>
+            Deletes a user by ID.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="command">Command for deleting a user.</param>
+            <returns>Status code 204 if successful.</returns>
+        </member>
+    </members>
+</doc>

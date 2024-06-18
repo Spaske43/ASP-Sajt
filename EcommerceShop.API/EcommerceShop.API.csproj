@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EcommerceShop.Application\EcommerceShop.Application.csproj" />
+    <ProjectReference Include="..\EcommerceShop.DataAccess\EcommerceShop.DataAccess.csproj" />
+    <ProjectReference Include="..\EcommerceShop.Domain\EcommerceShop.Domain.csproj" />
+    <ProjectReference Include="..\EcommerceShop.Implementation\EcommerceShop.Implementation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+</Project>
